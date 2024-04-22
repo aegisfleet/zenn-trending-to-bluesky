@@ -23,4 +23,4 @@ def fetch_article_content(url):
     soup = BeautifulSoup(response.text, 'html.parser')
     article_content_selector = 'article'
     article_content = soup.select_one(article_content_selector).text.strip()
-    return article_content
+    return article_content[:6000]
